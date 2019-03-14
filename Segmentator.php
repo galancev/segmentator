@@ -7,10 +7,10 @@ use ReflectionException;
 
 /**
  * Сегментатор
- * Class SegmentatorBase
+ * Class Segmentator
  * @package Components\Segmentator
  */
-abstract class SegmentatorBase
+abstract class Segmentator
 {
     /**
      * Имя куки
