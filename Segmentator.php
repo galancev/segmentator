@@ -1,6 +1,6 @@
 <?php
 
-namespace Components\Segmentator;
+namespace Galantcev\Components;
 
 use ReflectionClass;
 use ReflectionException;

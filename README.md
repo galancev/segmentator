@@ -8,7 +8,7 @@
 ```php
 <?php
 
-use Components\Segmentator\Segmentator;
+use Galantcev\Components\Segmentator;
 
 /**
  * Новый яростный сегментатор
