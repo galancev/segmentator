@@ -1,6 +1,6 @@
 <?php
 
-namespace Galantcev\Components;
+namespace EG\Components;
 
 use ReflectionClass;
 use ReflectionException;
@@ -8,7 +8,7 @@ use ReflectionException;
 /**
  * Сегментатор
  * Class Segmentator
- * @package Components\Segmentator
+ * @package EG\Segmentator
  */
 abstract class Segmentator
 {
