@@ -112,9 +112,18 @@ abstract class Segmentator
     {
         $segment = $this->getNewSegment();
 
-        $this->setCookieValue($segment);
+        $this->saveSegment($segment);
 
         return $segment;
+    }
+
+    /**
+     * Сохраняет сегмент
+     * @param $segment
+     */
+    public function saveSegment($segment)
+    {
+        $this->setCookieValue($segment);
     }
 
     /**
