@@ -48,7 +48,7 @@ abstract class Segmentator
      * Возвращает, нужно ли настроить имя куки
      * @return bool
      */
-    private function isNeedSetCookieName()
+    protected function isNeedSetCookieName()
     {
         return ($this->getCookieName() === '');
     }
@@ -56,7 +56,7 @@ abstract class Segmentator
     /**
      * Генерирует и сохраняет имя куки сегментатора
      */
-    private function generateAndSaveCookieName()
+    protected function generateAndSaveCookieName()
     {
         if ($this->isNeedSetCookieName()) {
             try {
@@ -71,7 +71,7 @@ abstract class Segmentator
      * Сохранить имя куки
      * @param string $cookieName
      */
-    private function setCookieName($cookieName)
+    protected function setCookieName($cookieName)
     {
         $this->cookieName = $cookieName;
     }
@@ -80,7 +80,7 @@ abstract class Segmentator
      * Возвращает имя куки
      * @return string
      */
-    private function getCookieName()
+    protected function getCookieName()
     {
         return $this->cookieName;
     }
@@ -89,7 +89,7 @@ abstract class Segmentator
      * Возвращает значение куки
      * @return mixed
      */
-    private function getCookieValue()
+    protected function getCookieValue()
     {
         return $_COOKIE[$this->getCookieName()];
     }
@@ -98,7 +98,7 @@ abstract class Segmentator
      * Сохраняет значение куки
      * @param $cookieValue
      */
-    private function setCookieValue($cookieValue)
+    protected function setCookieValue($cookieValue)
     {
         setcookie($this->getCookieName(), $cookieValue, time() + $this->cookieLifeTime, $this->cookiePath, $this->cookieDomain);
         $_COOKIE[$this->getCookieName()] = $cookieValue;
@@ -108,7 +108,7 @@ abstract class Segmentator
      * Генерирует новый сегмент и сохраняет его
      * @return mixed
      */
-    private function generateAndSaveSegment()
+    protected function generateAndSaveSegment()
     {
         $segment = $this->getNewSegment();
 
